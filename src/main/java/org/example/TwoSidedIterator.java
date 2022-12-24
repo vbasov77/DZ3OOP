@@ -14,22 +14,22 @@ public class TwoSidedIterator implements ListIterator<Student> {
 
     @Override
     public boolean hasNext() {
-        return false;
+        return index >= 0;
     }
 
     @Override
     public Student next() {
-        return null;
+        return group.get(index++);
     }
 
     @Override
     public boolean hasPrevious() {
-        return false;
+        return index <= 0;
     }
 
     @Override
     public Student previous() {
-        return null;
+        return group.get(index--);
     }
 
     @Override
